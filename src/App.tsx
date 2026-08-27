@@ -4,11 +4,9 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./App.css";
 
-const CharacterModel = lazy(() => import("./components/Character"));
-const MainContainer = lazy(() => import("./components/MainContainer"));
+const Homepage = lazy(() => import("./pages/Homepage"));
 const MyWorks = lazy(() => import("./pages/MyWorks"));
 const Play = lazy(() => import("./pages/Play"));
-import { LoadingProvider } from "./context/LoadingProvider";
 
 const App = () => {
   return (
@@ -17,15 +15,9 @@ const App = () => {
         <Route
           path="/"
           element={
-            <LoadingProvider>
-              <Suspense>
-                <MainContainer>
-                  <Suspense>
-                    <CharacterModel />
-                  </Suspense>
-                </MainContainer>
-              </Suspense>
-            </LoadingProvider>
+            <Suspense fallback={null}>
+              <Homepage />
+            </Suspense>
           }
         />
         <Route

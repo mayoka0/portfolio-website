@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { config } from "../config";
 import "./styles/CallToAction.css";
 

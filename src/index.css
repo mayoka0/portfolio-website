@@ -34,7 +34,7 @@ h6 {
 }
 
 body {
-  overflow: hidden;
+  overflow: auto;
 }
 
 /* Allow scrolling on mobile */
@@ -188,4 +188,11 @@ body {
   .techstack h2 {
     font-size: 40px;
   }
+}
+
+/* Homepage redesign base */
+html, body, #root {
+  margin: 0;
+  min-height: 100%;
+  background: #0a0a0b;
 }
